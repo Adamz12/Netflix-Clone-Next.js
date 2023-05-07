@@ -3,6 +3,7 @@ import useAuth from "@/useHooks/useAuth";
 import { CheckIcon } from "@heroicons/react/24/solid";
 import { Product } from "@stripe/firestore-stripe-payments";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Loader from "./Loader";
@@ -32,7 +33,7 @@ function Plans({ products }: Props) {
 
       <header className="border-b border-white/10 bg-[#141414]">
         <Link href={"/"}>
-          <img
+          <Image
             src="https://rb.gy/ulxxee"
             alt="Netflix"
             width={150}
