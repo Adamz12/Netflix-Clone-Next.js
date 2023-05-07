@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <RecoilRoot>
       {/* HIGHER ORDER COMPONENT */}
       <AuthProvider>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
       </AuthProvider>
     </RecoilRoot>
   );
