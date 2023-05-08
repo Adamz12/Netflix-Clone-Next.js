@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import BasicMenu from "./BasicMenu";
+import NetlixLogo from "../assets/Netflix_2015.png";
+import NetflixAvatar from "../assets/Netflix-avatar.png";
 
 function Header() {
   const [isScrolled, setScrolled] = useState(false);
@@ -29,10 +31,10 @@ function Header() {
     <header className={`${isScrolled && "bg-[#141414]"}`}>
       <div className="flex space-x-2 md:space-x-10">
         <Image
-          src="https://rb.gy/ulxxee"
-          alt=""
+          src={NetlixLogo}
           width={100}
           height={100}
+          alt=""
           className="cursor-pointer object-contain"
         />
 
@@ -52,7 +54,9 @@ function Header() {
         <BellIcon className="h-6 w-6" />
         <Link href="/account">
           <Image
-            src="https://rb.gy/g1pwyx"
+            src={NetflixAvatar}
+            width={35}
+            height={35}
             alt=""
             className="cursor-pointer rounded"
           />

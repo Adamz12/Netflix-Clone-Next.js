@@ -12,6 +12,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import NetflixLogo from "../assets/Netflix_2015.png";
+import NetflixAvatar from "../assets/Netflix-avatar.png";
+import playButton from "../assets/play-button7.png";
+import { FaArrowRight } from "react-icons/fa";
 
 interface Props {
   products: Product[];
@@ -30,16 +34,18 @@ function Account({ products }: Props) {
       <header className="bg-[#141414]">
         <Link href="/">
           <Image
-            src="https://rb.gy/ulxxee"
+            src={NetflixLogo}
+            width={100}
+            height={100}
             alt=""
-            width={120}
-            height={120}
             className="cursor-pointer object-contain"
           />
         </Link>
         <Link href="/account">
           <Image
-            src="https://rb.gy/g1pwyx"
+            src={NetflixAvatar}
+            width={35}
+            height={35}
             alt=""
             className="cursor-pointer rounded"
           />
@@ -49,7 +55,7 @@ function Account({ products }: Props) {
         <div className="flex flex-col gap-x-4 md:flex-row md:items-center">
           <h1 className="text-3xl md:text-4xl">Account</h1>
           <div className="-ml-0.5 flex items-center gap-x-1.5">
-            <Image src="https://rb.gy/4vfk4r" alt="" className="h-7 w-7" />
+            <Image src={playButton} alt="" className="h-7 w-7" />
             <p className="text-xs font-semibold text-[#555]">
               Member Since {subscription?.created}
             </p>
